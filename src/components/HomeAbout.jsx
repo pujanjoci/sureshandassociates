@@ -109,7 +109,7 @@ const HomeAbout = () => {
                 </div>
                 
                 {/* Goals */}
-                <div>
+                {/* <div>
                   <div className="flex items-center mb-4">
                     <ArrowTrendingUpIcon className="h-6 w-6 text-blue-500 mr-3" />
                     <h4 className="text-xl font-semibold text-gray-800">Goals</h4>
@@ -140,7 +140,9 @@ const HomeAbout = () => {
                       Establish a benchmark in forensic and investigative auditing
                     </li>
                   </ul>
-                </div>
+                </div> */}
+
+                
               </div>
             </div>
           </div>

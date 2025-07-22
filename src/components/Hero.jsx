@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import heroBg from '../assets/hero-bg.jpg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -24,15 +25,15 @@ const Hero = () => {
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               <span className='text-blue-800'>S</span>
-              <span className='text-green-600'>.Suresh </span> 
+              <span className='text-green-600'>. Suresh </span> 
               <span className='text-neutral-300'>& Associates</span>
             </h1>
             <p className="text-xl md:text-2xl text-purple-200">
               Providing service over a decade.
             </p>
             <div className="pt-4">
-              <a 
-                href="#about" 
+              <Link 
+                to="/about" 
                 className="relative text-lg font-medium group transition-all duration-300 inline-block"
               >
                 <span className="relative">
@@ -40,7 +41,7 @@ const Hero = () => {
                   <span className="absolute left-0 bottom-0 h-0.5 bg-amber-400 w-0 group-hover:w-full transition-all duration-500"></span>
                 </span>
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white/30"></span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

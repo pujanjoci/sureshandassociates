@@ -1,4 +1,5 @@
 import { BuildingOfficeIcon, ScaleIcon, ChartBarIcon, ShieldCheckIcon, LightBulbIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
+import Suresh from '../assets/Suresh.png';
 
 export default function AboutUs() {
   return (
@@ -79,12 +80,12 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Objectives & Goals */}
+      {/* Objectives */}
       <div className="py-16 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Our Objectives & Goals
+              Our Objectives
             </h2>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
               Driving excellence in financial services and business advisory
@@ -139,57 +140,6 @@ export default function AboutUs() {
                     <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Sustainable Growth</h3>
                     <p className="mt-5 text-base text-gray-500">
                       Foster accountability and sustainable growth for clients through comprehensive financial planning.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Goal 1 */}
-              <div className="pt-6">
-                <div className="flow-root bg-white rounded-lg px-6 pb-8 h-full">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                        <BuildingOfficeIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Trusted Partnership</h3>
-                    <p className="mt-5 text-base text-gray-500">
-                      To become a trusted partner for 100+ enterprises in South Asia by 2030 through exceptional service delivery.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Goal 2 */}
-              <div className="pt-6">
-                <div className="flow-root bg-white rounded-lg px-6 pb-8 h-full">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                        <ChartBarIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Digital Transformation</h3>
-                    <p className="mt-5 text-base text-gray-500">
-                      Lead the way in digital finance and ERP adoption for SMEs to enhance operational efficiency.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Goal 3 */}
-              <div className="pt-6">
-                <div className="flow-root bg-white rounded-lg px-6 pb-8 h-full">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-                        <ShieldCheckIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Forensic Excellence</h3>
-                    <p className="mt-5 text-base text-gray-500">
-                      Establish a benchmark in forensic and investigative auditing with cutting-edge methodologies.
                     </p>
                   </div>
                 </div>
@@ -275,65 +225,33 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="mt-16">
-            <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+          <div className="mt-16 flex justify-center">
+            <div className="w-full max-w-md"> {/* Reduced max width */}
               <div className="group relative">
-                <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                <div className="relative bg-white rounded-lg overflow-hidden group-hover:opacity-75">
+                  {/* Original aspect ratio maintained but smaller size */}
                   <img
-                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                    src={Suresh}
                     alt="S. Suresh"
-                    className="w-full h-full object-center object-cover"
+                    className="w-full h-auto max-h-[300px] object-contain mx-auto" 
+                    style={{ aspectRatio: '632/764' }} // Explicit aspect ratio
                   />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">
-                  <span className="absolute inset-0" />
-                  S. Suresh
-                </h3>
-                <p className="text-base text-gray-500">Founder & Managing Partner</p>
-                <p className="mt-2 text-sm text-gray-500">
-                  With over 25 years of experience in audit and advisory services, S. Suresh brings unparalleled expertise in financial governance and compliance.
-                </p>
-              </div>
-
-              <div className="group relative">
-                <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                    alt="R. Meena"
-                    className="w-full h-full object-center object-cover"
-                  />
+                <div className="mt-6 text-center">
+                  <h3 className="text-2xl font-medium text-gray-900">
+                    S. Suresh
+                  </h3>
+                  <p className="text-lg text-gray-500 mt-2">Founder & Managing Partner</p>
+                  <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto">
+                    With over 25 years of experience in audit and advisory services, S. Suresh brings unparalleled expertise in financial governance and compliance.
+                  </p>
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">
-                  <span className="absolute inset-0" />
-                  R. Meena
-                </h3>
-                <p className="text-base text-gray-500">Partner - Audit & Assurance</p>
-                <p className="mt-2 text-sm text-gray-500">
-                  Specializing in statutory audits and internal controls, Meena leads our audit practice with meticulous attention to detail.
-                </p>
-              </div>
-
-              <div className="group relative">
-                <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src="https://images.unsplash.com/photo-1573497019704-22b3b9c6b1f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                    alt="K. Arvind"
-                    className="w-full h-full object-center object-cover"
-                  />
-                </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900">
-                  <span className="absolute inset-0" />
-                  K. Arvind
-                </h3>
-                <p className="text-base text-gray-500">Partner - Advisory & Digital Transformation</p>
-                <p className="mt-2 text-sm text-gray-500">
-                  Arvind drives our digital transformation initiatives, helping clients leverage technology for financial excellence.
-                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 }
