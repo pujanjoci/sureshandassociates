@@ -1,4 +1,10 @@
+import { Link } from 'react-router-dom';
+import servicesData from '../data/services.json';
+
 const Footer = () => {
+  // Randomize the services order
+  const randomizedServices = [...servicesData].sort(() => 0.5 - Math.random());
+
   return (
     <footer className="bg-neutral-900 text-neutral-100 py-12">
       <div className="container mx-auto px-6">
@@ -19,11 +25,31 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-5 uppercase tracking-wider text-neutral-200">Navigation</h4>
             <ul className="space-y-3">
-              <li><a href="/" className="text-neutral-400 hover:text-white transition-colors duration-200">Home</a></li>
-              <li><a href="/about" className="text-neutral-400 hover:text-white transition-colors duration-200">About Us</a></li>
-              <li><a href="/services" className="text-neutral-400 hover:text-white transition-colors duration-200">Services</a></li>
-              <li><a href="/insights" className="text-neutral-400 hover:text-white transition-colors duration-200">Insights</a></li>
-              <li><a href="/contact" className="text-neutral-400 hover:text-white transition-colors duration-200">Contact</a></li>
+              <li>
+                <Link to="/" className="text-neutral-400 hover:text-white transition-colors duration-200">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-neutral-400 hover:text-white transition-colors duration-200">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-neutral-400 hover:text-white transition-colors duration-200">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/insights" className="text-neutral-400 hover:text-white transition-colors duration-200">
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-neutral-400 hover:text-white transition-colors duration-200">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
           
@@ -31,11 +57,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-5 uppercase tracking-wider text-neutral-200">Expertise</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors duration-200">Statutory Audits</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors duration-200">Tax Advisory</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors duration-200">Forensic Auditing</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors duration-200">ERP Implementation</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors duration-200">Business Valuation</a></li>
+              {randomizedServices.slice(0, 5).map((service) => (
+                <li key={service.id}>
+                  <Link 
+                    to={`/services/${service.id}`} 
+                    className="text-neutral-400 hover:text-white transition-colors duration-200"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
@@ -45,7 +76,16 @@ const Footer = () => {
             <address className="text-neutral-400 not-italic space-y-3">
               <div>
                 <p className="font-medium text-neutral-300">Head Office:</p>
-                <p>Financial Plaza, 3rd Floor</p>
+                <p>
+                  <Link 
+                    href="https://maps.app.goo.gl/StsAueTS1QknMu7x5" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-1 text-blue-600 hover:text-blue-800 hover:underline"
+                  >
+                    Tinkune,
+                  </Link>
+                </p>
                 <p>Kathmandu 44600, Nepal</p>
               </div>
               <div>
@@ -64,9 +104,15 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} S.Suresh & Associates, CA. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-neutral-500 hover:text-white transition-colors duration-200 text-sm">Privacy Policy</a>
-              <a href="#" className="text-neutral-500 hover:text-white transition-colors duration-200 text-sm">Terms of Service</a>
-              <a href="#" className="text-neutral-500 hover:text-white transition-colors duration-200 text-sm">Sitemap</a>
+              <Link to="/privacypolicy" className="text-neutral-500 hover:text-white transition-colors duration-200 text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-neutral-500 hover:text-white transition-colors duration-200 text-sm">
+                Terms of Service
+              </Link>
+              <Link href="/sitemap" className="text-neutral-500 hover:text-white transition-colors duration-200 text-sm">
+                Sitemap
+              </Link>
             </div>
           </div>
         </div>
