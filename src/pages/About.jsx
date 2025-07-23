@@ -226,42 +226,51 @@ export default function AboutUs() {
       </div>
 
       {/* Leadership Section */}
-      <div className="py-16 bg-gray-50 overflow-hidden transition-all duration-300 hover:bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl transition-all duration-300 hover:text-indigo-700">
-              Our Leadership
-            </h2>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto transition-all duration-300 hover:text-gray-700">
-              Experienced professionals guiding your financial success
-            </p>
-          </div>
+{/* Leadership Section */}
+<div className="py-16 bg-gray-50 overflow-hidden transition-all duration-300 hover:bg-gray-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl transition-all duration-300 hover:text-indigo-700">
+        Our Leadership
+      </h2>
+      <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto transition-all duration-300 hover:text-gray-700">
+        Experienced professionals guiding your financial success
+      </p>
+    </div>
 
-          <div className="mt-16 flex justify-center">
-            <div className="w-full max-w-md transition-transform duration-300 hover:scale-105">
-              <div className="group relative">
-                <div className="relative bg-white rounded-lg overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
-                  <img
-                    src={Suresh}
-                    alt="S. Suresh"
-                    className="w-full h-auto max-h-[300px] object-contain mx-auto transition-transform duration-500 group-hover:scale-105"
-                    style={{ aspectRatio: '632/764' }}
-                  />
-                </div>
-                <div className="mt-6 text-center">
-                  <h3 className="text-2xl font-medium text-gray-900 transition-all duration-300 group-hover:text-indigo-700">
-                    Suresh Sharma
-                  </h3>
-                  <p className="text-lg text-gray-500 mt-2 transition-all duration-300 group-hover:text-indigo-600">Founder & Managing Partner</p>
-                  <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto transition-all duration-300 group-hover:text-gray-700">
-                    With over 10+ years of experience, CEO Suresh leads our firm with a commitment to excellence in audit and advisory services, ensuring our clients achieve their financial goals.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div className="mt-16 flex justify-center">
+      {/* Centered container */}
+      <div className="flex flex-col items-center transition-transform duration-300 hover:scale-105">
+        <div className="group relative flex flex-col items-center">
+          {/* Image container - now properly centered */}
+          <div className="bg-white w-[250px] rounded-lg overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl flex justify-center">
+            <img
+              src={Suresh}
+              alt="S. Suresh"
+              className="block h-auto max-h-[300px] w-full object-cover mx-auto"
+              style={{ 
+                aspectRatio: '632/764',
+                display: 'block'
+              }}
+            />
+          </div>
+          {/* Text content */}
+          <div className="mt-6 text-center w-full">
+            <h3 className="text-2xl font-medium text-gray-900 transition-all duration-300 group-hover:text-indigo-700">
+              Suresh Sharma
+            </h3>
+            <p className="text-lg text-gray-500 mt-2 transition-all duration-300 group-hover:text-indigo-600">
+              Founder & Managing Partner
+            </p>
+            <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto transition-all duration-300 group-hover:text-gray-700">
+              With over 10+ years of experience, CEO Suresh leads our firm with a commitment to excellence in audit and advisory services, ensuring our clients achieve their financial goals.
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
       {/* Team Section */}
       <div className="py-16 bg-white overflow-hidden transition-all duration-300 hover:bg-gray-50">
